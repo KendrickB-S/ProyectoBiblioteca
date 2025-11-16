@@ -2,7 +2,7 @@ import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 // --- IMPORTA TUS COMPONENTES DE LAYOUT ---
-import { NavbarComponent } from './layout/navbar/navbar.componet';
+import { NavbarComponent } from './layout/navbar/navbar.component';
 //import { FooterComponent } from './layout/footer/footer.component';
 
 @Component({

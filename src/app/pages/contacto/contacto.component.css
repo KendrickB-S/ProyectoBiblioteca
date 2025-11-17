@@ -1,0 +1,108 @@
+/* Estilos copiados de contactos.html */
+
+.fondo {
+  /* ¡Ruta corregida! Usa /img/ que apunta a la carpeta 'public/img' */
+  background: url('/img/fondillo1.png') ;
+  opacity: 0.25;
+  position: fixed;
+  top: 3%;
+  left: 2%;
+  right: 1%;
+  bottom: 0;
+  border-radius: 20px;
+  z-index: 0;
+}
+
+/* CONTENEDOR */
+.container-contacto {
+  position: relative;
+  z-index: 1;
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  /* Añadimos un padding-top para compensar el <br><br><br> que quitamos */
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.card-custom {
+  background: rgba(20, 20, 20, 0.75);
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.05);
+  box-shadow: 0 0 10px rgba(9,186,213,0.1);
+  color: #fff;
+}
+
+.section-title {
+  color: #09bad5;
+  font-weight: 600;
+}
+
+.form-control, .form-select {
+  background-color: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.15);
+  color: #fff;
+}
+
+.form-control:focus, .form-select:focus {
+  border-color: #09bad5;
+  box-shadow: 0 0 5px rgba(9,186,213,0.5);
+  background-color: rgba(255,255,255,0.08);
+  color: #fff;
+}
+
+/* Arreglo para que el texto del input sea blanco en Chrome */
+.form-control::placeholder {
+  color: #ccc;
+  opacity: 1;
+}
+.form-control:-ms-input-placeholder {
+  color: #ccc;
+}
+.form-control::-ms-input-placeholder {
+  color: #ccc;
+}
+/* Arreglo para el autocompletado de Chrome */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px rgba(255,255,255,0.05) inset !important;
+    -webkit-text-fill-color: #fff !important;
+}
+
+
+.btn-accent {
+  background-color: #09bad5;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.btn-accent:hover {
+  background-color: #fff;
+  color: #09bad5;
+  transform: scale(1.03);
+}
+
+.btn-outline-success {
+  border: 1px solid #25d366;
+  color: #25d366;
+}
+
+.btn-outline-success:hover {
+  background-color: #25d366;
+  color: #fff;
+}
+
+.footer-note {
+  text-align: center;
+  color: #ccc;
+  margin-top: 40px;
+  font-size: 0.9rem;
+}
+
+.muted {
+  color: #ccc;
+}

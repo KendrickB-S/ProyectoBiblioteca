@@ -1,1 +1,24 @@
-<p>catalogo works!</p>
+<div class="fondo"></div>
+<div class="iconos-flotantes">
+    <div class="search-icon-container"><i class="bi bi-search"></i></div>
+    <div class="prestamos-icon-container"><i class="bi bi-book-half"></i></div>
+</div>
+<div class="catalogo-header">
+    <h1>Catálogo de Libros</h1>
+    <p>Explora todos los títulos disponibles en nuestra biblioteca</p>
+</div>
+
+<div class="libros-container">
+
+    <div class="libro-card" *ngFor="let libro of libros">
+
+        <img [src]="libro.portadaUrl" [alt]="libro.titulo">
+
+        <div class="libro-info">
+            <h5 [textContent]="libro.titulo">Título del Libro</h5>
+            <p [textContent]="libro.autor">Autor del Libro</p>
+            <button class="btn-ver">Ver más</button>
+        </div>
+    </div>
+
+</div>

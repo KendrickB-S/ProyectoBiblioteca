@@ -1,1 +1,118 @@
-<p>inicio works!</p>
+
+<div class="iconos-flotantes">
+    <div class="search-icon-container"><i class="bi bi-search"></i></div>
+    <div class="prestamos-icon-container"><i class="bi bi-book-half"></i></div>
+</div>
+
+<section class="libros-section">
+    <div class="fondo"></div>
+    <div class="contenido">
+        <h1><span class="blanco">Explora</span> <span class="celeste">Nuestra Biblioteca</span></h1>
+        <div class="botones">
+            <button class="blanco">Ver Catálogo</button>
+            <button class="celeste">Novedades</button>
+        </div>
+
+        <div class="libros-grid">
+            <img src="/img/libro7.jpg" alt="Libro 1">
+            <img src="/img/libro3.jpg" alt="Libro 2">
+            <img src="/img/libro5.jpg" alt="Libro 3">
+        </div>
+    </div>
+</section>
+
+<section class="container my-5 text-center text-white">
+    <div class="row align-items-center">
+        <div class="col-lg-6 mb-4 mb-lg-0 seccion2-img">
+            <img src="/img/libroseccion2.png" class="img-fluid rounded-4 shadow" alt="Lectura" />
+        </div>
+        <div class="col-lg-6 text-start seccion2-texto">
+            <h2 class="fw-bold mb-3">
+                Fomentamos la <span class="text-info">lectura digital</span>
+            </h2>
+            <p class="lead">
+                Nuestra plataforma ofrece acceso a una amplia colección de libros digitales,
+                permitiendo a estudiantes y docentes explorar, aprender y compartir conocimiento
+                desde cualquier dispositivo.
+            </p>
+            <button class="btn btn-info text-white px-4 py-2 mt-3 fw-semibold">
+                Explorar más <i class="bi bi-arrow-right-circle"></i>
+            </button>
+        </div>
+    </div>
+</section>
+
+<section class="container my-5">
+    <div class="d-flex align-items-center mb-3">
+        <h3 class="me-auto">Recomendados</h3>
+    </div>
+    <div class="carousel-container position-relative">
+        <div class="carousel-track d-flex overflow-hidden" id="carouselTrack">
+            <div class="card book-card" *ngFor="let libro of libros">
+                <img [src]="libro.img" class="card-img-top" [alt]="libro.titulo">
+                <div class="card-body p-2">
+                    <p class="card-text text-center" style="font-size: 0.7rem;" 
+                       [textContent]="libro.titulo"></p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-btn prev btn btn-outline-secondary position-absolute top-50 start-0 translate-middle-y">&#10094;</button>
+        <button class="carousel-btn next btn btn-outline-secondary position-absolute top-50 end-0 translate-middle-y">&#10095;</button>
+    </div>
+</section>
+
+<section id="seccion4" class="container my-5">
+    <div class="d-flex align-items-center mb-3">
+        <h3 class="me-auto" id="subtitulo4">Agregados recientemente</h3>
+    </div>
+    <div class="carousel-container position-relative">
+        <div class="carousel-track d-flex overflow-hidden" id="carouselTrack4">
+             <div class="card book-card" *ngFor="let libro of libros">
+                <img [src]="libro.img" class="card-img-top" [alt]="libro.titulo">
+                <div class="card-body p-2">
+                    <p class="card-text text-center" style="font-size: 0.7rem;" 
+                       [textContent]="libro.titulo"></p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-btn prev position-absolute top-50 start-0 translate-middle-y">&#10094;</button>
+        <button class="carousel-btn next position-absolute top-50 end-0 translate-middle-y">&#10095;</button>
+    </div>
+</section>
+
+<section id="seccion5" class="container my-5">
+    <div class="d-flex align-items-center mb-3">
+        <h3 class="me-auto" id="subtitulo5">Autores reconocidos</h3>
+    </div>
+    <div class="carousel-container position-relative">
+        <div class="carousel-track d-flex overflow-hidden" id="carouselTrack5">
+             <div class="card book-card" *ngFor="let libro of libros">
+                <img [src]="libro.img" class="card-img-top" [alt]="libro.titulo">
+                <div class="card-body p-2">
+                    <p class="card-text text-center" style="font-size: 0.7rem;" 
+                       [textContent]="libro.titulo"></p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-btn prev position-absolute top-50 start-0 translate-middle-y">&#10094;</button>
+        <button class="carousel-btn next position-absolute top-50 end-0 translate-middle-y">&#10095;</button>
+    </div>
+</section>
+
+<section id="seccion6" class="container my-5">
+    <div class="text-center mb-4">
+        <h3 class="subtitulo6">Explora nuestras categorías</h3>
+    </div>
+    <div class="enlaces-cuadro p-4 rounded">
+        <div class="row g-3">
+            <div class="col-6 col-md-3"><a href="#" class="enlace-item">Lo Mejor<span class="flecha">&#8594;</span></a></div>
+            <div class="col-6 col-md-3"><a href="#" class="enlace-item">Cuentos Top<span class="flecha">&#8594;</span></a></div>
+            <div class="col-6 col-md-3"><a href="#" class="enlace-item">Novelas Top<span class="flecha">&#8594;</span></a></div>
+            <div class="col-6 col-md-3"><a href="#" class="enlace-item">Novedades <span class="flecha">&#8594;</span></a></div>
+            <div class="col-6 col-md-3"><a href="#" class="enlace-item">Existos Históricos <span class="flecha">&#8594;</span></a></div>
+            <div class="col-6 col-md-3"><a href="#" class="enlace-item">Más Destacados <span class="flecha">&#8594;</span></a></div>
+            <div class="col-6 col-md-3"><a href="#" class="enlace-item">Materias <span class="flecha">&#8594;</span></a></div>
+            <div class="col-6 col-md-3"><a href="#" class="enlace-item">Ultimas Tendencias <span class="flecha">&#8594;</span></a></div>
+        </div>
+    </div>
+</section>

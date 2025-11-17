@@ -1,1 +1,37 @@
-<p>prestamos works!</p>
+<div class="iconos-flotantes">
+    <div class="search-icon-container"><i class="bi bi-search"></i></div>
+    <div class="prestamos-icon-container"><i class="bi bi-book-half"></i></div>
+</div>
+<div class="contenedor-general">
+
+  <div class="catalogo-header">
+    <h1>Gestión de Préstamos</h1>
+    <p>Controla y visualiza el estado de los préstamos de libros</p>
+  </div>
+
+  <div class="libros-container">
+
+    <div class="libro-card" *ngFor="let prestamo of prestamos">
+      
+      <img [src]="prestamo.portadaUrl" [alt]="prestamo.libro.titulo">
+      
+      <div class="libro-info">
+        
+        <h5 [textContent]="prestamo.libro.titulo">Orgullo y prejuicio</h5>
+        <p><i class="bi bi-person-fill"></i> <span [textContent]="prestamo.usuario.nombre">Luis Fernández</span></p>
+        <p><i class="bi bi-calendar-check"></i> <strong>Préstamo:</strong> <span [textContent]="prestamo.fechaPrestamo">2025-09-15</span></p>
+        <p><i class="bi bi-calendar-x"></i> <strong>Devolución:</strong> <span [textContent]="prestamo.fechaDevolucion">2025-09-29</span></p>
+
+        <span class="badge-estado" [ngClass]="getEstadoClass(prestamo.estado)"
+              [textContent]="prestamo.estado">Vigente</span>
+
+        <div>
+          <button class="btn-ver"><i class="bi bi-eye"></i> Ver detalles</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="fondo"></div>
+</div>

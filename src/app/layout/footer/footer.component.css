@@ -1,0 +1,71 @@
+/* Estilos del Footer (originalmente en nav.css) */
+.footer {
+  background: rgba(4, 4, 4, 0.526); /* fondo semitransparente negro */
+  backdrop-filter: blur(10px); /* efecto vidrio */
+  -webkit-backdrop-filter: blur(10px); /* para Safari */
+  color: #ffffff;
+  padding-top: 3rem;
+  padding-bottom: 1.5rem;
+}
+
+/* Footer Logo */
+.footer-logo {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+/* Logo debajo del nombre, centrado correctamente */
+.footer-logo-img {
+  display: block;
+  margin: 0 auto; /* centra en móviles */
+}
+
+/* En pantallas grandes, alineado a la izquierda con el texto */
+@media (min-width: 768px) {
+  .col-md-3.text-md-start .footer-logo-img {
+    margin-left: 0; /* Alinea a la izquierda */
+  }
+}
+
+/* Enlaces footer */
+.footer-link {
+  font-size: 13.5px;
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+  color: #04a8c1;
+}
+
+/* Iconos redes sociales */
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  background-color: rgba(255, 255, 255, 0.1); /* semitransparente para glass effect */
+  border-radius: 50%;
+  color: #ffffff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+  background-color: #04a8c1;
+  transform: translateY(-3px);
+}
+
+/* Separador */
+hr.bg-secondary {
+  border-color: rgba(255, 255, 255, 0.3);
+  margin: 1.5rem 0;
+}
+
+/* Copyright */
+.footer p.copyright {
+  font-size: 0.75rem; /* más pequeño */
+}

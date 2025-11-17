@@ -1,15 +1,16 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
-// --- IMPORTA TUS COMPONENTES DE LAYOUT ---
 import { NavbarComponent } from './layout/navbar/navbar.component';
-//import { FooterComponent } from './layout/footer/footer.component';
+import { FooterComponent } from './layout/footer/footer.component'; // <-- Importa el Footer
 
 @Component({
   selector: 'app-root',
-  //standalone: true,
-  // --- AÑÁDELOS AQUÍ ---
-  imports: [RouterOutlet, NavbarComponent ], //FooterComponent
+  imports: [
+    RouterOutlet, 
+    NavbarComponent, 
+    FooterComponent // <-- Añade el Footer aquí
+  ],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

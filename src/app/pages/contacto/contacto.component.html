@@ -1,1 +1,76 @@
-<p>contacto works!</p>
+<div class="fondo"></div>
+<div class="container-contacto">
+    <div class="row g-4">
+        <div class="col-lg-7">
+            <div class="card card-custom p-4">
+                <h3 class="section-title mb-3">Contáctanos</h3>
+                <p class="muted mb-4">¿Dudas o sugerencias? Escríbenos y te responderemos pronto.</p>
+
+                <form>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <input class="form-control" placeholder="Nombre completo" required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <input type="email" class="form-control" placeholder="Correo electrónico" required>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <input class="form-control" placeholder="Asunto">
+                    </div>
+
+                    <div class="mb-3">
+                        <textarea class="form-control" rows="5" placeholder="Escribe tu mensaje..."></textarea>
+                    </div>
+
+                    <div class="mb-3 d-flex gap-2">
+                        <input type="file" class="form-control form-control-sm">
+                        <select class="form-select form-select-sm" style="max-width:160px">
+                            <option>Consulta</option>
+                            <option>Sugerencia</option>
+                            <option>Reporte</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3 form-check">
+                        <input class="form-check-input" type="checkbox" id="notify">
+                        <label class="form-check-label" for="notify">Deseo recibir respuesta por WhatsApp</label>
+                    </div>
+
+                    <div class="d-flex gap-2">
+                        <button class="btn btn-accent">Enviar mensaje</button>
+                        <a class="btn btn-outline-success" href="https://wa.me/51999999999?text=Hola%20Biblioteca%20tengo%20una%20consulta" target="_blank">
+                            <i class="bi bi-whatsapp"></i> Chat WhatsApp
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="col-lg-5">
+            <div class="card card-custom p-3 mb-4">
+                <h5>Contacto rápido</h5>
+                <p class="muted"><i class="bi bi-geo-alt-fill"></i> Av. Parra 123, Arequipa</p>
+                <p class="muted"><i class="bi bi-telephone-fill"></i> +51 987 654 321 </p>
+                <p class="muted"><i class="bi bi-envelope-fill"></i> truebook@biblioteca.com</p>
+                <hr class="border-secondary">
+                <h6>Horario de atención</h6>
+                <p class="muted mb-0">Lun-Vie: 9:00 - 19:00</p>
+                <p class="muted">Sáb: 10:00 - 14:00</p>
+            </div>
+
+            <div class="card card-custom p-3">
+                <h5>Asistencia</h5>
+                <p class="muted">Chatbot (simulado):</p>
+                <div class="p-2 bg-black rounded">
+                    <p class="muted"><strong>BibliotecaBot:</strong> ¡Hola! ¿En qué puedo ayudarte hoy?</p>
+                    <div class="d-flex">
+                        <input class="form-control form-control-sm me-2" placeholder="Escribe..." disabled>
+                        <button class="btn btn-sm btn-accent" disabled><i class="bi bi-send"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

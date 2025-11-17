@@ -1,1 +1,45 @@
-<p>login works!</p>
+<div class="auth-container">
+    <div class="auth-image"></div>
+
+    <div class="auth-card">
+        <div class="auth-card-inner">
+            
+            <div id="loginForm" class="form-visible w-100">
+                <img src="/img/logolibro.png" alt="Logo Biblioteca" class="logo">
+                <h3>Iniciar Sesión</h3>
+                
+                <form class="d-flex flex-column w-100">
+                    <input type="email" name="email" class="form-control" placeholder="Correo electrónico (@gmail.com)" required 
+                           pattern=".+@gmail\.com" 
+                           title="Solo se permiten correos @gmail.com">
+                    <input type="password" name="password" class="form-control" placeholder="Contraseña" required>
+                    <button type="submit" class="btn btn-primary mt-2">Ingresar</button>
+                </form>
+                
+                <div class="text-center switch-link mt-2">
+                    ¿No tienes cuenta? <a href="#" (click)="toggleForms($event)">Regístrate</a>
+                </div>
+            </div>
+
+            <div id="registerForm" class="form-hidden w-100">
+                <img src="/img/logolibro.png" alt="Logo Biblioteca" class="logo">
+                <h3>Crear Cuenta</h3>
+                
+                <form class="d-flex flex-column w-100">
+                    <input type="text" name="name" class="form-control" placeholder="Nombre" required>
+                    <input type="email" name="email" class="form-control" placeholder="Correo electrónico (@gmail.com)" required 
+                           pattern=".+@gmail\.com" 
+                           title="Solo se permiten correos @gmail.com">
+                    <input type="password" name="password" class="form-control" placeholder="Contraseña" required>
+                    <input type="password" name="confirmPassword" class="form-control" placeholder="Confirmar contraseña" required>
+                    <button type="submit" class="btn btn-primary mt-2">Registrarme</button>
+                </form>
+                
+                <div class="text-center switch-link mt-2">
+                    ¿Ya tienes cuenta? <a href="#" (click)="toggleForms($event)">Inicia sesión</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

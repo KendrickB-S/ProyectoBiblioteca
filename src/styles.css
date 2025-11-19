@@ -289,7 +289,6 @@ hr.bg-secondary {
 /* BODY */
 body{
   margin: 0;
-  padding-top: 50px;
   font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   background: #000000;
 }

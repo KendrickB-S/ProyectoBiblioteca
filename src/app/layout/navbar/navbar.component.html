@@ -4,11 +4,22 @@
         
         <a routerLink="/inicio">Inicio</a>
         <a routerLink="/catalogo">Catálogo</a>
-        <a routerLink="/prestamos">Préstamos</a>
-        <a routerLink="/contacto">Contacto</a>
+
+        <a *ngIf="authService.currentUser() && !authService.isAdmin()" routerLink="/prestamos">Mis Préstamos</a>
         
-        <a routerLink="/login" class="login-btn">
+        <a routerLink="/contacto">Contacto</a>
+
+        <a *ngIf="authService.isAdmin()" routerLink="/admin/libros" style="color: #ffcc00;">ADMIN</a>
+        
+        <a *ngIf="!authService.currentUser()" routerLink="/login" class="login-btn">
             Iniciar Sesión <i class="bi bi-person-fill"></i>
         </a>
+
+        <div *ngIf="authService.currentUser()" class="d-flex align-items-center gap-2">
+            <span class="text-white">Hola, {{ authService.currentUser().nombre }}</span>
+            <button (click)="logout()" class="btn btn-outline-light btn-sm">
+                <i class="bi bi-box-arrow-right"></i>
+            </button>
+        </div>
     </nav>
 </div>

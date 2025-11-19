@@ -1,8 +1,8 @@
 /* Estilos del Footer (originalmente en nav.css) */
 .footer {
-  background: rgba(4, 4, 4, 0.526); /* fondo semitransparente negro */
-  backdrop-filter: blur(10px); /* efecto vidrio */
-  -webkit-backdrop-filter: blur(10px); /* para Safari */
+  background: rgba(4, 4, 4, 0.526); 
+  backdrop-filter: blur(10px); 
+  -webkit-backdrop-filter: blur(10px); 
   color: #ffffff;
   padding-top: 3rem;
   padding-bottom: 1.5rem;
@@ -15,16 +15,15 @@
   margin-bottom: 0.5rem;
 }
 
-/* Logo debajo del nombre, centrado correctamente */
 .footer-logo-img {
   display: block;
-  margin: 0 auto; /* centra en móviles */
+  margin: 0 auto; 
 }
 
-/* En pantallas grandes, alineado a la izquierda con el texto */
+
 @media (min-width: 768px) {
   .col-md-3.text-md-start .footer-logo-img {
-    margin-left: 0; /* Alinea a la izquierda */
+    margin-left: 0; 
   }
 }
 
@@ -47,7 +46,7 @@
   justify-content: center;
   width: 35px;
   height: 35px;
-  background-color: rgba(255, 255, 255, 0.1); /* semitransparente para glass effect */
+  background-color: rgba(255, 255, 255, 0.1); 
   border-radius: 50%;
   color: #ffffff;
   text-decoration: none;

@@ -38,9 +38,9 @@ body {
   gap: 40px;
   font-size: 12.5px;
   animation: slideDown 1s ease-out forwards;
-  flex-wrap: nowrap; /* nunca baja de fila */
-  justify-content: space-between; /* logo a la izquierda, links a la derecha */
-  overflow: visible; /* sin scroll horizontal */
+  flex-wrap: nowrap; 
+  justify-content: space-between; 
+  overflow: visible; 
   animation: slideDown 1s ease-out forwards;
 
 }
@@ -130,12 +130,12 @@ body {
 
   /* Animación de entrada desde más arriba y más lenta */
   animation: slideDownIcons 1.4s ease forwards;
-  opacity: 0; /* empieza invisible */
+  opacity: 0; 
 }
 
 @keyframes slideDownIcons {
   0% {
-    transform: translateY(-80px); /* más arriba que antes */
+    transform: translateY(-80px); 
     opacity: 0;
   }
   100% {
@@ -182,9 +182,9 @@ body {
 
 /* Footer con efecto vidrio oscuro */
 .footer {
-  background: rgba(4, 4, 4, 0.526); /* fondo semitransparente negro */
-  backdrop-filter: blur(10px); /* efecto vidrio */
-  -webkit-backdrop-filter: blur(10px); /* para Safari */
+  background: rgba(4, 4, 4, 0.526); 
+  backdrop-filter: blur(10px); 
+  -webkit-backdrop-filter: blur(10px); 
   color: #ffffff;
   padding-top: 3rem;
   padding-bottom: 1.5rem;
@@ -197,16 +197,16 @@ body {
   margin-bottom: 0.5rem;
 }
 
-/* Logo debajo del nombre, centrado correctamente */
+/* Logo debajo del nombre*/
 .footer-logo-img {
   display: block;
-  margin: 0 auto; /* centra en móviles */
+  margin: 0 auto; 
 }
 
 /* En pantallas grandes, alineado a la izquierda con el texto */
 @media (min-width: 768px) {
   .col-md-3.text-md-start .footer-logo-img {
-    margin-left: 0; /* Alinea a la izquierda */
+    margin-left: 0;
   }
 }
 
@@ -229,7 +229,7 @@ body {
   justify-content: center;
   width: 35px;
   height: 35px;
-  background-color: rgba(255, 255, 255, 0.1); /* semitransparente para glass effect */
+  background-color: rgba(255, 255, 255, 0.1); 
   border-radius: 50%;
   color: #ffffff;
   text-decoration: none;
@@ -249,5 +249,5 @@ hr.bg-secondary {
 
 /* Copyright */
 .footer p.copyright {
-  font-size: 0.75rem; /* más pequeño */
+  font-size: 0.75rem; 
 }

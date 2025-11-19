@@ -1,0 +1,149 @@
+/* admin-style.css - Estilos para el Panel de Administración */
+
+:root {
+  --primary-color: #0ea1b8;       
+  --primary-hover: #0c97a8;       
+  --sidebar-bg: #f8f9fa;          
+  --sidebar-text: #333333;        
+  --sidebar-active-bg: #e3f2fd;   
+  --text-muted: #6c757d;
+}
+
+body .admin-style {
+    padding-top: 0;
+}
+/* =========================================
+   LAYOUT PRINCIPAL 
+   ========================================= */
+#wrapper {
+  overflow-x: hidden;
+  min-height: 100vh; 
+}
+
+/* =========================================
+   SIDEBAR (Barra Lateral)
+   ========================================= */
+.sidebar {
+  min-height: 100vh;
+  background-color: var(--sidebar-bg);
+  border-right: 1px solid #dee2e6;
+  transition: margin 0.25s ease-out;
+}
+
+.sidebar .nav-link {
+  color: var(--sidebar-text);
+  font-weight: 500;
+  padding: 12px 20px;
+  border-radius: 8px;
+  margin-bottom: 5px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+
+/* Efecto Hover en los enlaces */
+.sidebar .nav-link:hover {
+  background-color: rgba(14, 161, 184, 0.1);
+  color: var(--primary-color);
+  transform: translateX(5px); 
+}
+
+/* Enlace Activo (Página actual) */
+.sidebar .nav-link.active {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  box-shadow: 0 4px 6px rgba(14, 161, 184, 0.3);
+}
+
+/* Iconos dentro del sidebar */
+.sidebar .nav-link i {
+  font-size: 1.2rem;
+  margin-right: 10px;
+}
+
+/* =========================================
+   CONTENIDO PRINCIPAL
+   ========================================= */
+#page-content-wrapper {
+  width: 100%;
+  background-color: #ffffff;
+}
+
+.main-content {
+  padding: 30px;
+}
+
+/* =========================================
+   NAVBAR SUPERIOR
+   ========================================= */
+.navbar {
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  background-color: #ffffff;
+  padding: 15px 30px;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  color: #333;
+}
+
+/* =========================================
+   TABLAS PERSONALIZADAS
+   ========================================= */
+.table-responsive {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.05); 
+  overflow: hidden;
+}
+
+/* Encabezado de la tabla */
+.table-custom-header {
+  background-color: var(--primary-color);
+  color: #ffffff;
+}
+
+.table-custom-header th {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  padding: 15px;
+  border: none;
+}
+
+/* Celdas de la tabla */
+.table td {
+  vertical-align: middle;
+  padding: 15px;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+/* Efecto hover en filas */
+.table-hover tbody tr:hover {
+  background-color: rgba(14, 161, 184, 0.05);
+}
+
+/* =========================================
+   BOTONES Y UTILIDADES
+   ========================================= */
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+  border-color: var(--primary-hover);
+}
+
+.text-secondary {
+  color: var(--text-muted) !important;
+}
+
+/* Badges (Etiquetas de estado) más elegantes */
+.badge {
+  padding: 0.5em 0.8em;
+  font-weight: 500;
+  border-radius: 6px;
+}

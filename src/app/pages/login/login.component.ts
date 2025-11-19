@@ -1,60 +1,59 @@
-import { Component, AfterViewInit } from '@angular/core';
-import { CommonModule } from '@angular/common'; // Importamos CommonModule
+import { Component, inject } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms'; 
+import { AuthService } from '../../services/auth.service';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, FormsModule, RouterLink], 
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
-export class LoginComponent implements AfterViewInit {
+export class LoginComponent {
+  authService = inject(AuthService);
+  router = inject(Router);
 
-  // ngAfterViewInit se ejecuta cuando el HTML ya está cargado
-  ngAfterViewInit(): void {
-    // Lógica para animar los botones al cargar la página
-    setTimeout(() => {
-      document.querySelectorAll('.form-visible .btn-primary, .form-visible .switch-link')
-        .forEach(el => el.classList.add('animate'));
-    }, 1400); // 1.4 segundos de espera
+  // Variables para el formulario
+  loginData = { email: '', password: '' };
+  registerData = { nombre: '', email: '', password: '', confirmPassword: '' };
+  
+  // Control de vista (Login o Registro)
+  isLoginMode = true;
 
-    // Lógica para mostrar las alertas (Toasts) de Bootstrap
-    // (Esto funcionará cuando volvamos a añadir las alertas)
-    const toastContainer = document.querySelector('.toast-container');
-    if (toastContainer) {
-        // const toastElements = toastContainer.querySelectorAll('.toast');
-        // toastElements.forEach(toastEl => {
-        //     const toast = new bootstrap.Toast(toastEl); // Necesitaríamos importar 'bootstrap'
-        //     toast.show();
-        // });
-        console.log("Contenedor de Toasts encontrado, pero la lógica está comentada por ahora.");
-    }
+  onLogin() {
+    this.authService.login(this.loginData.email, this.loginData.password).subscribe({
+      next: (user) => {
+        console.log('Login exitoso:', user);
+        this.router.navigate(['/inicio']); 
+      },
+      error: (err) => {
+        alert('Error: Credenciales incorrectas');
+        console.error(err);
+      }
+    });
   }
 
-  // Esta función maneja el clic en "Regístrate" o "Inicia sesión"
-  toggleForms(event: Event): void {
-    event.preventDefault(); // Evita que el enlace '#' mueva la página
-
-    const login = document.getElementById("loginForm");
-    const register = document.getElementById("registerForm");
-    
-    // Quita las animaciones para reiniciarlas
-    document.querySelectorAll('.btn-primary, .switch-link').forEach(el => el.classList.remove('animate'));
-
-    if (login && register) {
-      if (login.classList.contains("form-visible")) {
-        login.classList.replace("form-visible", "form-hidden");
-        register.classList.replace("form-hidden", "form-visible");
-      } else {
-        register.classList.replace("form-visible", "form-hidden");
-        login.classList.replace("form-hidden", "form-visible");
-      }
+  onRegister() {
+    if (this.registerData.password !== this.registerData.confirmPassword) {
+      alert('Las contraseñas no coinciden');
+      return;
     }
 
-    // Reactiva las animaciones para el nuevo formulario visible
-    setTimeout(() => {
-      document.querySelectorAll('.form-visible .btn-primary, .form-visible .switch-link')
-        .forEach(el => el.classList.add('animate'));
-    }, 100);
+    this.authService.register(this.registerData.nombre, this.registerData.email, this.registerData.password).subscribe({
+      next: () => {
+        alert('Registro exitoso. Ahora inicia sesión.');
+        this.toggleMode(); // Cambiar a modo login
+      },
+      error: (err) => {
+        alert('Error en el registro');
+        console.error(err);
+      }
+    });
+  }
+
+  toggleMode() {
+    this.isLoginMode = !this.isLoginMode;
   }
 }

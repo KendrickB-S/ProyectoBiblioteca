@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common'; // <-- Importamos CommonModule por si acaso
+import { CommonModule } from '@angular/common'; 
 
 @Component({
   selector: 'app-contacto',

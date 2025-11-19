@@ -20,7 +20,6 @@
   width: 90%;
   max-width: 1200px;
   margin: auto;
-  /* Añadimos un padding-top para compensar el <br><br><br> que quitamos */
   padding-top: 60px;
   padding-bottom: 60px;
 }
@@ -62,7 +61,7 @@
 .form-control::-ms-input-placeholder {
   color: #ccc;
 }
-/* Arreglo para el autocompletado de Chrome */
+
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,

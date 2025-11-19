@@ -129,7 +129,7 @@
 .libros-section h1 .celeste,
 .libros-grid img {
   opacity: 0;
-  display: inline-block; /* para que translateX/translateY funcione */
+  display: inline-block;
 }
 
 /* Animaciones aplicadas */
@@ -143,8 +143,8 @@
 }
 
 .libros-section .botones button {
-  opacity: 0;              /* para animar desde invisible */
-  transform: translateY(50px); /* posición inicial fuera de vista */
+  opacity: 0;           
+  transform: translateY(50px); 
   animation: slideFromBottom 0.8s ease-out forwards;
 }
 
@@ -195,7 +195,7 @@
   }
 }
 
-/* 📱 Tablets pequeñas y móviles horizontales (481px - 768px) */
+/*  Tablets pequeñas y móviles horizontales (481px - 768px) */
 @media (min-width: 481px) and (max-width: 688px) {
   .libros-section {
     margin-top: 35px;
@@ -259,7 +259,7 @@
     font-size: 12px;
     margin-top: 10px;
     margin-bottom: -10px;
-    width: auto;          /* Asegura que no ocupen el 100% */
+    width: auto;          
   }
 
   .libros-grid img {
@@ -460,8 +460,7 @@ section.container {
 }
 
 .book-card:hover img {
-  box-shadow: 0 0 20px 5px rgba(12, 169, 200, 0.9); /* sombra alrededor de todo el contorno */
-}
+  box-shadow: 0 0 20px 5px rgba(12, 169, 200, 0.9); 
 
 /* Texto de descripción en blanco */
 .book-card .card-text {
@@ -486,7 +485,7 @@ section.container {
 
 /* Efecto hover */
 .carousel-btn:hover {
-  background: #0293a6; /* color más oscuro al pasar el mouse */
+  background: #0293a6; 
 }
 
 /* SECCION 6 */
@@ -498,7 +497,7 @@ section.container {
 
 /* Cuadro transparente */
 .enlaces-cuadro {
-  background-color: rgba(255, 255, 255, 0.05); /* transparente con un toque */
+  background-color: rgba(255, 255, 255, 0.05); 
   border-radius: 12px;
 }
 
@@ -528,5 +527,5 @@ section.container {
 }
 
 .enlace-item:hover .flecha {
-  transform: translateX(5px); /* mueve la flecha a la derecha */
+  transform: translateX(5px);
 }

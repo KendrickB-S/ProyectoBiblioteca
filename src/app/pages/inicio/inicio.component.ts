@@ -1,17 +1,17 @@
 import { Component, OnInit, AfterViewInit, HostListener, ElementRef } from '@angular/core';
-import { CommonModule } from '@angular/common'; // ¡Importante para *ngFor!
+import { CommonModule } from '@angular/common'; 
 
 @Component({
   selector: 'app-inicio',
   standalone: true,
-  imports: [CommonModule], // <-- ¡Añade CommonModule aquí!
+  imports: [CommonModule], 
   templateUrl: './inicio.component.html',
   styleUrls: ['./inicio.component.css']
 })
 export class InicioComponent implements OnInit, AfterViewInit {
 
-  // 1. Movemos el array de libros aquí, como una propiedad de la clase
-  // Corregí las rutas de las imágenes para que coincidan con la carpeta /img/
+  // array de libros
+
   libros = [
     { img: '/img/libro3.jpg', titulo: 'Libro 1' },
     { img: '/img/libro5.jpg', titulo: 'Libro 2' },
@@ -32,12 +32,10 @@ export class InicioComponent implements OnInit, AfterViewInit {
 
   // ngOnInit se ejecuta antes de que la vista esté lista
   ngOnInit(): void {
-    // Aquí puedes poner lógica que no dependa del DOM
   }
 
   // ngAfterViewInit se ejecuta DESPUÉS de que el HTML se haya renderizado
   ngAfterViewInit(): void {
-    // Es más seguro mover la lógica del DOM aquí
     this.inicializarCarruseles();
     this.inicializarObserverSubtitulos();
   }
@@ -45,7 +43,7 @@ export class InicioComponent implements OnInit, AfterViewInit {
   // HostListener reemplaza a 'window.addEventListener' para el scroll
   @HostListener('window:scroll')
   onWindowScroll() {
-    // Lógica de la SECCIÓN 2 (Fomentamos la lectura)
+    // Lógica de la SECCIÓN 2 
     const seccion = this.elRef.nativeElement.querySelector('section.container.my-5.text-center');
     if (seccion) {
       const imagen = seccion.querySelector('.seccion2-img img') as HTMLElement;
@@ -96,7 +94,7 @@ export class InicioComponent implements OnInit, AfterViewInit {
 
   // Función para la lógica de los carruseles
   inicializarCarruseles(): void {
-    const cardWidth = 136; // (8rem * 16px) + 8px gap = 136px. Ajusta si es necesario.
+    const cardWidth = 136; 
     
     // Carrusel 1 (Recomendados)
     this.setupCarousel('carouselTrack', '.carousel-btn.prev', '.carousel-btn.next', cardWidth);

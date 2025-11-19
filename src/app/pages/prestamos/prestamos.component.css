@@ -2,7 +2,6 @@
 
 /* Fondo general */
 .contenedor-general .fondo {
-  /* ¡Ruta corregida! Apunta a /img/ en la carpeta 'public' */
   background: url('/img/fondillo1.png') center/cover no-repeat;
   opacity: 0.25;
   position: fixed;
@@ -19,7 +18,6 @@
   text-align: center;
   margin-top: 40px;
   margin-bottom: 20px;
-  /* Añadimos position relative para que esté sobre el fondo */
   position: relative;
   z-index: 2;
 }

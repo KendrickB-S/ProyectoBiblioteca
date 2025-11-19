@@ -26,7 +26,7 @@ export class PrestamosComponent {
       usuario: { nombre: 'Hector Benavides' },
       fechaPrestamo: '2025-09-01',
       fechaDevolucion: '2025-09-14',
-      estado: 'Vencido', // Cambiado para mostrar otro estado
+      estado: 'Vencido', 
       portadaUrl: '/img/libro5.jpg'
     },
     {
@@ -34,7 +34,7 @@ export class PrestamosComponent {
       usuario: { nombre: 'Azucena Portocarrero' },
       fechaPrestamo: '2025-09-15',
       fechaDevolucion: '2025-09-29',
-      estado: 'Devuelto', // Cambiado para mostrar otro estado
+      estado: 'Devuelto', 
       portadaUrl: '/img/libro3.jpg'
     },
     {

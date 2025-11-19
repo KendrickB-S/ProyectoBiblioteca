@@ -40,7 +40,6 @@
   gap: 50px;
   padding: 40px;
   justify-items: center;
-  /* Añadimos position relative para que esté sobre el fondo */
   position: relative;
   z-index: 2;
 }

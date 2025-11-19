@@ -10,9 +10,9 @@
 
 <div class="libros-container">
 
-    <div class="libro-card" *ngFor="let libro of libros">
+    <div class="libro-card" *ngFor="let libro of libros()">
 
-        <img [src]="libro.portadaUrl" [alt]="libro.titulo">
+        <img [src]="'/img/' + libro.portadaUrl" [alt]="libro.titulo">
 
         <div class="libro-info">
             <h5 [textContent]="libro.titulo">Título del Libro</h5>

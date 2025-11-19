@@ -461,7 +461,7 @@ section.container {
 
 .book-card:hover img {
   box-shadow: 0 0 20px 5px rgba(12, 169, 200, 0.9); 
-
+}
 /* Texto de descripción en blanco */
 .book-card .card-text {
   color: #ffffff;
